@@ -186,18 +186,35 @@ const Result: React.FC<ResultProps> = ({ config }) => {
             <Clock className="text-primary-color shrink-0" size={18} />
             <p className="text-sm text-slate-600 font-medium">{config.identity.timings}</p>
           </div>
-          <div className="pt-4 grid grid-cols-2 gap-3">
-            <button onClick={() => window.open(config.identity.instagramLink, '_blank')} className="flex items-center justify-center gap-2 bg-slate-50 py-3 rounded-xl border border-slate-100 group">
-              <Instagram size={18} className="text-pink-500" />
-              <span className="text-[10px] font-black uppercase tracking-widest">Insta</span>
-            </button>
-            <button onClick={() => window.open(config.identity.facebookLink, '_blank')} className="flex items-center justify-center gap-2 bg-slate-50 py-3 rounded-xl border border-slate-100 group">
-              <Facebook size={18} className="text-blue-600" />
-              <span className="text-[10px] font-black uppercase tracking-widest">FB</span>
-            </button>
-          </div>
+          {config.identity.KnowYourGym && (
+  <button
+    onClick={() => window.open(config.identity.KnowYourGym, '_blank')}
+    className="w-full flex items-center justify-center gap-2 mb-3 text-[10px] font-black uppercase tracking-widest text-slate-600 bg-slate-50 py-3 rounded-xl border border-slate-100 hover:bg-slate-100 transition"
+  >
+    Know your Gym
+  </button>
+)}
+
+<div className="pt-4 grid grid-cols-2 gap-3">
+  <button
+    onClick={() => window.open(config.identity.instagramLink, '_blank')}
+    className="flex items-center justify-center gap-2 bg-slate-50 py-3 rounded-xl border border-slate-100 group"
+  >
+    <Instagram size={18} className="text-pink-500" />
+    <span className="text-[10px] font-black uppercase tracking-widest">Insta</span>
+  </button>
+
+  <button
+    onClick={() => window.open(config.identity.facebookLink, '_blank')}
+    className="flex items-center justify-center gap-2 bg-slate-50 py-3 rounded-xl border border-slate-100 group"
+  >
+    <Facebook size={18} className="text-blue-600" />
+    <span className="text-[10px] font-black uppercase tracking-widest">FB</span>
+  </button>
+</div>
         </div>
       </div>
+
 
       <div className="bg-slate-900 rounded-[2rem] p-8 shadow-2xl relative overflow-hidden">
         {isCapturing && (
