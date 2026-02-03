@@ -186,15 +186,15 @@ const Result: React.FC<ResultProps> = ({ config }) => {
             <Clock className="text-primary-color shrink-0" size={18} />
             <p className="text-sm text-slate-600 font-medium">{config.identity.timings}</p>
           </div>
-          {config.identity.KnowYourGym && (
+         {config.identity.KnowYourGym && (
   <button
     onClick={() => window.open(config.identity.KnowYourGym, '_blank')}
     className="w-full flex items-center justify-center mb-5 text-2xl font-extrabold uppercase tracking-wide text-black bg-white py-7 rounded-2xl border-2 border-black hover:bg-slate-100 transition"
-
   >
     Know Your Gym
   </button>
 )}
+
 
 <div className="pt-4 grid grid-cols-2 gap-3">
   <button
