@@ -189,7 +189,7 @@ const Result: React.FC<ResultProps> = ({ config }) => {
           {config.identity.KnowYourGym && (
   <button
     onClick={() => window.open(config.identity.KnowYourGym, '_blank')}
-    className="w-full flex items-center justify-center mb-4 text-xl font-extrabold uppercase tracking-wide text-black bg-slate-50 py-6 rounded-xl border-2 border-slate-200 hover:bg-slate-100 transition"
+    className="w-full flex items-center justify-center mb-5 text-2xl font-extrabold uppercase tracking-wide text-black bg-white py-7 rounded-2xl border-2 border-black hover:bg-slate-100 transition"
 
   >
     Know Your Gym
