@@ -1,0 +1,5 @@
+{
+  "name": "Spin & Win - Premium Gym Edition",
+  "description": "A high-end, mobile-first spin-to-win application designed for gyms and clubs, featuring weighted logic, admin controls, and local storage persistence.",
+  "requestFramePermissions": []
+}

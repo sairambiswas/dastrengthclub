@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spin & Win - Premium</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Bebas+Neue&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --primary-color: #ef4444;
+        --accent-color: #fbbf24;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background: linear-gradient(-45deg, #f8fafc, #f1f5f9, #ffffff, #f8fafc);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        color: #0f172a;
+        overflow-x: hidden;
+        margin: 0;
+        min-height: 100vh;
+      }
+      @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+      }
+      @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+      }
+      @keyframes pulse-glow {
+        0% { box-shadow: 0 0 0 0 rgba(15, 23, 42, 0.4); }
+        70% { box-shadow: 0 0 0 15px rgba(15, 23, 42, 0); }
+        100% { box-shadow: 0 0 0 0 rgba(15, 23, 42, 0); }
+      }
+      .font-bebas {
+        font-family: 'Bebas Neue', cursive;
+      }
+      .transition-all {
+        transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      .animate-float {
+        animation: float 4s ease-in-out infinite;
+      }
+      .pulse-glow {
+        animation: pulse-glow 2s infinite;
+      }
+      .shimmer {
+        position: relative;
+        overflow: hidden;
+      }
+      .shimmer::after {
+        content: '';
+        position: absolute;
+        top: -50%;
+        left: -50%;
+        width: 200%;
+        height: 200%;
+        background: linear-gradient(
+          to bottom right,
+          rgba(255, 255, 255, 0) 0%,
+          rgba(255, 255, 255, 0.1) 50%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        transform: rotate(45deg);
+        animation: shimmer 3s infinite;
+      }
+      @keyframes shimmer {
+        0% { transform: translateX(-100%) rotate(45deg); }
+        100% { transform: translateX(100%) rotate(45deg); }
+      }
+    </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.13.0",
+    "lucide-react": "https://esm.sh/lucide-react@^0.563.0",
+    "canvas-confetti": "https://esm.sh/canvas-confetti@^1.9.4",
+    "html2canvas": "https://esm.sh/html2canvas@^1.4.1"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
