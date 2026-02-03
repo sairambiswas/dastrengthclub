@@ -31,7 +31,7 @@ export const DEFAULT_CONFIG: AppConfig = {
     timings: '6:00 AM - 10:00 PM (Daily)',
     facebookLink: 'https://www.facebook.com/profile.php?id=61581331336481',
     instagramLink: 'https://instagram.com/dastrengthclub',
-    KnowYourGym: "/Psychology of Strength and Philosophy.pdf",
+    KnowYourGym: 'https://drive.google.com/file/d/1V2rr6PlGCeWxMPjjcZF2Fzf93yl7lNGt/view?usp=drive_link',
   },
   nextSteps: {
     heading: 'HOW TO CLAIM',
