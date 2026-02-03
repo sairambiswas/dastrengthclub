@@ -114,7 +114,7 @@ const Result: React.FC<ResultProps> = ({ config }) => {
 
         await new Promise(r => setTimeout(r, 1500));
         
-        const message = `Hi! I just won *${winningSlice.label}* at *${config.identity.name}*!\n\nCoupon Code: *${winningSlice.coupon || 'N/A'}*\n\nI have the screenshot ready to share!`;
+        const message = `Hi! I just won *${winningSlice.label}* at *${config.identity.name}*!\n\nCoupon Code: *${winningSlice.coupon || 'N/A'}*\n\nReady to share!`;
         window.open(`https://wa.me/${ctaValue.replace(/\D/g, '')}?text=${encodeURIComponent(message)}`);
         
       } catch (err) {
@@ -246,7 +246,7 @@ const Result: React.FC<ResultProps> = ({ config }) => {
         </button>
         {config.nextSteps.ctaActionType === 'whatsapp' && (
           <p className="text-[9px] text-slate-500 font-bold uppercase tracking-widest text-center mt-4">
-            Screenshot will be captured & copied automatically
+            Press the Button to send us your reward.
           </p>
         )}
       </div>
